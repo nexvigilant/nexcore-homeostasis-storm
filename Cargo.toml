@@ -1,0 +1,22 @@
+[package]
+name = "nexcore-homeostasis-storm"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Storm detection and prevention for the Homeostasis Machine"
+
+[dependencies]
+nexcore-homeostasis-primitives = { path = "../nexcore-homeostasis-primitives" }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+nexcore-error = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true, features = ["sync", "time"] }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full", "test-util"] }
+
+[lints]
+workspace = true
